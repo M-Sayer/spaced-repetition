@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 import { Input, Label } from '../Form/Form'
 import AuthApiService from '../../services/auth-api-service'
 import UserContext from '../../contexts/UserContext'
@@ -45,6 +46,11 @@ class LoginForm extends Component {
     const { error } = this.state
     return (
       <div className='loginSection'>
+         <div className='info'>
+         <p>
+            Practice learning a language with the spaced reptition revision technique.
+          </p>
+        </div>
         <form
           className='loginForm'
           onSubmit={this.handleSubmit}
@@ -77,6 +83,11 @@ class LoginForm extends Component {
           <Button className='loginBtn' type='submit'>
             Login
           </Button>
+          <footer>
+            Don't have an account?
+            {' '}
+            <Link className='footerLink' to='/register'>Sign up</Link>
+          </footer>
         </form>
       </div>
     )

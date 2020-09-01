@@ -1,0 +1,25 @@
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 80%;
+  margin-left: 10%;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  flex: 1;
+  font-size: 20px;
+}
+
+
+.headerLink {
+  color: rgba(10, 180, 180, 1);
+  text-decoration: none;
+}
+
+.loginLink {
+  color: rgba(10, 180, 180, 1);
+  text-decoration: none;
+}

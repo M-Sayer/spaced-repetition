@@ -23,3 +23,8 @@ header h1 {
   color: rgba(10, 180, 180, 1);
   text-decoration: none;
 }
+
+.loginLinkActive {
+  color: rgba(10, 180, 180, 1);
+  text-decoration: underline;
+}

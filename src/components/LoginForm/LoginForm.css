@@ -11,7 +11,7 @@ body {
   background-repeat: no-repeat;
 }
 
-.signupSection {
+.loginSection {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -39,14 +39,14 @@ body {
   font-size: 14px;
 }
 
-.signupForm {
+.loginForm {
   width: 100%;
   height: 100%;
   /* background: rgba(20, 40, 40, .8); */
   transition: .2s;
 }
 
-.signupForm h2 {
+.loginForm h2 {
   font-weight: 300;
 }
 
@@ -69,7 +69,7 @@ body {
   padding: 0;
 }
 
-.joinBtn {
+.loginBtn {
   border: 1px solid rgba(10, 180, 180, 1);
   background: rgba(20, 20, 20, .6);
   font-size: 18px;
@@ -80,7 +80,7 @@ body {
   transition: .4s;
 }
 
-.joinBtn:hover {
+.loginBtn:hover {
   background: rgba(20, 20, 20, .8);
   padding: 10px 80px;
 }

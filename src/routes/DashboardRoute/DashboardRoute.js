@@ -22,7 +22,9 @@ class DashboardRoute extends Component {
   renderWordTiles = () => {
     if (this.state.words) return this.state.words.map((word, idx) => {
       return (
-        <WordTile key={idx} word={word} />
+        
+        <WordTile className='word-card' key={idx} word={word} />
+    
       )
     })
   }
@@ -41,16 +43,19 @@ class DashboardRoute extends Component {
   render() {
     return (
       <div className='dash'>
-        implement and style me
-        <div>
-          language:
+       
+        <div className="language-header-text">
+          Language:
           {this.state.language.name}
         </div>
+
+        <section className='word-card-wrapper'>
         words for language:
         {this.renderWordTiles()}
         total score:
         {this.renderTotalScore()}
         start learning:
+        </section>
       </div>
     );
   }

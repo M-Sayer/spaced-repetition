@@ -11,20 +11,31 @@ header {
 header h1 {
   flex: 1;
   font-size: 20px;
+  font-family: 'Squada One', cursive;
+
+}
+
+a.headerLink {
+  font-family: 'Squada One', cursive;
+  font-size: 1.5em;
+
 }
 
 
 .headerLink {
   color: rgba(10, 180, 180, 1);
   text-decoration: none;
+
 }
 
 .loginLink {
   color: rgba(10, 180, 180, 1);
   text-decoration: none;
+  font-family: 'Khand', sans-serif;
 }
 
 .loginLinkActive {
   color: rgba(10, 180, 180, 1);
   text-decoration: underline;
+  font-family: 'Khand', sans-serif;
 }

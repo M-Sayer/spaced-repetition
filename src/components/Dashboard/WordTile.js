@@ -5,13 +5,13 @@ import { StyledWordTile } from './WordTile.styled';
 const WordTile = (props) => {
   const word = props.word;
   return (
-    <StyledWordTile>
-      <section clasName='wordInLang'>
+    <section className='word-card'>
+      <div className='wordInLang'>
         <h2>{word.original}</h2>
-      </section>
-      <section className='wordInEng'>
+      </div>
+      <div className='wordInEng'>
         <h4>{word.translation}</h4>
-      </section>
+      </div>
       <div className='count'>
         <span className='correctCount'>
           {word.correct_count}</span>
@@ -19,7 +19,7 @@ const WordTile = (props) => {
           {word.incorrect_count}
         </span>
       </div>
-    </StyledWordTile>
+    </section>
   )
 }
 

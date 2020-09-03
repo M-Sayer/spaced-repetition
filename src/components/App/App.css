@@ -1,3 +1,104 @@
 div[role=alert] {
   color: red;
 }
+
+span {
+  color: white;
+  margin: 10px;
+  font-size: 1.5em;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.5em;
+  font-family: 'Squada One', cursive;
+}
+
+h2 {
+  margin: 5px;
+  font-family: 'Squada One', cursive;
+  font-size: 2.8em;
+}
+
+h4 {
+  margin: 5px;
+  font-size: 1.2em;
+}
+
+p {
+  color: white;
+  font-size: 1.5em;
+}
+
+.language-header-text {
+  color: #0ab4b4;
+  font-family: 'Squada One', cursive;
+  font-size: 2em;
+
+}
+
+.correctCount {
+  color: green;
+
+}
+
+.incorrectCount {
+  color: red;
+}
+
+.word-card-wrapper {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.word-card {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #0ab4b4;
+  margin: 5px;
+  padding: 0px;
+  }
+
+@media screen and (min-width: 1200px) {
+
+  .dash {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .word-card {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  /* background: rgba(20, 40, 40, .8); */
+  margin: 20px;
+  
+  }
+
+  .word-card-wrapper{
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .count {
+    display: flex;
+    flex-direction: row;
+  }
+
+    span {
+      padding: 0 20px;
+    }
+  
+
+ 
+
+}

@@ -4,7 +4,7 @@ export const StyledWordTile = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
+  width: 30%;
   background: rgba(20, 40, 40, .8);
   margin: 5px 0;
   padding-bottom: 10px;

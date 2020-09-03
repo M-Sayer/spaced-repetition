@@ -42,6 +42,7 @@ class RegistrationForm extends Component {
     return (
      <div className='signupSection'>
        <div className='info'>
+         <h2>Sign up</h2>
          <p>
             Practice learning a language with the spaced reptition revision technique.
           </p>
@@ -53,9 +54,10 @@ class RegistrationForm extends Component {
             {error && <p>{error}</p>}
           </div>
           <div>
-            <Label placeholder='test' htmlFor='registration-name-input'>
+            <Label placeholder='test' htmlFor='registration-name-input'>Enter your name*
             </Label>
             <Input className='inputFields'
+              type='text'
               ref={this.firstInput}
               id='registration-name-input'
               name='name'
@@ -64,9 +66,10 @@ class RegistrationForm extends Component {
             />
           </div>
           <div>
-            <Label htmlFor='registration-username-input'>
+            <Label htmlFor='registration-username-input'>Choose a username*
             </Label>
             <Input className='inputFields'
+              type='text'
               id='registration-username-input'
               name='username'
               required
@@ -74,7 +77,7 @@ class RegistrationForm extends Component {
             />
           </div>
           <div>
-            <Label htmlFor='registration-password-input'>
+            <Label htmlFor='registration-password-input'>Choose a password*
             </Label>
             <Input className='inputFields'
               id='registration-password-input'
@@ -85,12 +88,13 @@ class RegistrationForm extends Component {
             />
           </div>
           <Button className='joinBtn' type='submit'>
-            Sign up
+          Sign up
           </Button>
           <footer>
             Already have an account?
             {' '}
             <Link className='footerLink' to='/login'>Log in</Link>
+            {/* <a href={"/login"}> Login </a> */}
           </footer>
         </form>
      </div>

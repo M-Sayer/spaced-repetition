@@ -43,7 +43,6 @@ class DashboardRoute extends Component {
   render() {
     return (
       <div className='dash'>
-        <div>
         language:
           {this.context.language && this.context.language.language.name}
         <div className="language-header-text">

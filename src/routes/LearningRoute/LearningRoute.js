@@ -7,23 +7,10 @@ import '../../components/RegistrationForm/RegistrationForm.css'
 
 class LearningRoute extends Component {
 
-  handleSubmit = ev => {
-    ev.preventDefault()
-    const { guess } = ev.target
-    LanguageApiService.postUser({
-      guess: guess.value
-  
-    })
-      .then(user => {
-        guess.value = ''
-        this.props.onGuessSuccess()
-      })
-      .catch(res => {
-        this.setState({ error: res.error })
-      })
-  }
+  handleSubmit = ev => {}
 
   componentDidMount() {
+    
   }
 
   render() {

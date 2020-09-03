@@ -12,19 +12,15 @@ class DashboardRoute extends Component {
   async componentDidMount() {
     const data = await LanguageApiService.getUserLanguage();
     console.log(data)
-    this.context.setLanguage({
-      language: {...data.language},
-      words: data.words,
-    })
-    console.log(this.context)
+    this.context.setLanguage({ ...data.language })
+    this.context.setWords(data.words)
+    console.log('context: ', this.context)
   }
   
   renderWordTiles = () => {
-    if (this.context.language.words) return this.context.language.words.map((word, idx) => {
+    if (this.context.words) return this.context.words.map((word, idx) => {
       return (
-        
         <WordTile className='word-card' key={idx} word={word} />
-    
       )
     })
   }
@@ -32,21 +28,20 @@ class DashboardRoute extends Component {
   renderTotalScore = () => {
     let correct = 0
     let incorrect = 0
-    
-    if (this.context.language.words) this.context.language.words.forEach(word => {
-      correct += word.correct_count
-      incorrect += word.incorrect_count
-    })
+    if (this.context.words) {
+      this.context.words.forEach(word => {
+        correct += word.correct_count
+        incorrect += word.incorrect_count
+      })
+    }
     return (correct - incorrect)
   }
   
   render() {
     return (
       <div className='dash'>
-        language:
-          {this.context.language && this.context.language.language.name}
         <div className="language-header-text">
-          Language: {this.state.language.name}
+          Language: {this.context.language.name}
         </div>
        
         <div className='score-box'>

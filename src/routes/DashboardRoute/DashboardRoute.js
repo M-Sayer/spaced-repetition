@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import LanguageApiService from '../../services/language-api-service';
 import './DashboardRoute.css'
 
@@ -45,17 +46,20 @@ class DashboardRoute extends Component {
       <div className='dash'>
        
         <div className="language-header-text">
-          Language:
-          {this.state.language.name}
+          Language: {this.state.language.name}
+        </div>
+       
+        <div className='score-box'>
+        <p>total score: {this.renderTotalScore()}</p>
         </div>
 
+        <Link to='/dashboard'>Start learning</Link>
+        
+
         <section className='word-card-wrapper'>
-        words for language:
         {this.renderWordTiles()}
-        total score:
-        {this.renderTotalScore()}
-        start learning:
         </section>
+
       </div>
     );
   }

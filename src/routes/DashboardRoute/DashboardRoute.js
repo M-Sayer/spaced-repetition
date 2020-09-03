@@ -28,7 +28,6 @@ class DashboardRoute extends Component {
   renderTotalScore = () => {
     let correct = 0
     let incorrect = 0
-    
     if (this.context.words) {
       this.context.words.forEach(word => {
         correct += word.correct_count

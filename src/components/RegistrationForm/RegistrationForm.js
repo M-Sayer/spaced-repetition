@@ -40,52 +40,64 @@ class RegistrationForm extends Component {
   render() {
     const { error } = this.state
     return (
-      <form
-        onSubmit={this.handleSubmit}
-      >
-        <div role='alert'>
-          {error && <p>{error}</p>}
-        </div>
-        <div>
-          <Label htmlFor='registration-name-input'>
-            Enter your name<Required />
-          </Label>
-          <Input
-            ref={this.firstInput}
-            id='registration-name-input'
-            name='name'
-            required
-          />
-        </div>
-        <div>
-          <Label htmlFor='registration-username-input'>
-            Choose a username<Required />
-          </Label>
-          <Input
-            id='registration-username-input'
-            name='username'
-            required
-          />
-        </div>
-        <div>
-          <Label htmlFor='registration-password-input'>
-            Choose a password<Required />
-          </Label>
-          <Input
-            id='registration-password-input'
-            name='password'
-            type='password'
-            required
-          />
-        </div>
-        <footer>
-          <Button type='submit'>
-            Sign up
+     <div className='signupSection'>
+       <div className='info'>
+         <h2>Sign up</h2>
+         <p>
+            Practice learning a language with the spaced reptition revision technique.
+          </p>
+       </div>
+        <form className='signupForm'
+          onSubmit={this.handleSubmit}
+        >
+          <div role='alert'>
+            {error && <p>{error}</p>}
+          </div>
+          <div>
+            <Label placeholder='test' htmlFor='registration-name-input'>Enter your name*
+            </Label>
+            <Input className='inputFields'
+              type='text'
+              ref={this.firstInput}
+              id='registration-name-input'
+              name='name'
+              required
+              placeholder='Enter your name'
+            />
+          </div>
+          <div>
+            <Label htmlFor='registration-username-input'>Choose a username*
+            </Label>
+            <Input className='inputFields'
+              type='text'
+              id='registration-username-input'
+              name='username'
+              required
+              placeholder='Choose a username'
+            />
+          </div>
+          <div>
+            <Label htmlFor='registration-password-input'>Choose a password*
+            </Label>
+            <Input className='inputFields'
+              id='registration-password-input'
+              name='password'
+              type='password'
+              required
+              placeholder='Choose a password'
+            />
+          </div>
+          <Button className='joinBtn' type='submit'>
+          Sign up
           </Button>
-          {' '}
-          <Link to='/login'>Already have an account?</Link>
-        </footer>
-      </form>
+          <footer>
+            Already have an account?
+            {' '}
+            <Link className='footerLink' to='/login'>Log in</Link>
+            {/* <a href={"/login"}> Login </a> */}
+          </footer>
+        </form>
+     </div>
     )
   }
 }

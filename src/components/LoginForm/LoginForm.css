@@ -7,22 +7,34 @@ body {
   margin: 0;
   padding: 0;
   /* overflow: hidden; */
-  background: #111;
-  background-repeat: no-repeat;
+  /* background: #111; */
+  /* background: #0ab4b4;
+  background-repeat: no-repeat; */
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; */
+  /* background: #111; */
+  /* background-repeat: no-repeat; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
 .loginSection {
-  position: absolute;
+  /* position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
+  transform: translate(-50%, -50%); */
+  width: 100%;
   text-align: center;
   display: flex;
   flex-direction: column;
   color: white;
   box-shadow: 5px 10px 20px 5px rgba(0, 0, 0, .5);
   padding-bottom: 20px;
+  background: #0000008a;
+  transition: .2s;
 }
 
 .info h2 {
@@ -49,11 +61,11 @@ body {
   font-size: 16px;
   padding: 10px;
   width: 250px;
-  border: 1px solid rgba(10, 180, 180, 1);
+  border: 1px solid #0ab4b4;
   border-top: none;
   border-left: none;
   border-right: none;
-  background: rgba(20, 20, 20, .2);
+  background: #14141433;
   color: white;
   outline: none;
 }
@@ -64,7 +76,7 @@ body {
 }
 
 .loginBtn {
-  border: 1px solid rgba(10, 180, 180, 1);
+  border: 1px solid #0ab4b4;
   background: rgba(20, 20, 20, .6);
   font-size: 18px;
   color: white;

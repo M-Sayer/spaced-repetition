@@ -94,7 +94,7 @@ class RegistrationForm extends Component {
             Already have an account?
             {' '}
             <Link className='footerLink' to='/login'>Log in</Link>
-            <a href={"/login"}> Login </a>
+            {/* <a href={"/login"}> Login </a> */}
           </footer>
         </form>
      </div>

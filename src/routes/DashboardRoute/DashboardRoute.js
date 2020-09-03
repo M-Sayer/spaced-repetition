@@ -53,7 +53,7 @@ class DashboardRoute extends Component {
         <p>total score: {this.renderTotalScore()}</p>
         </div>
 
-        <Link to='/dashboard'>Start learning</Link>
+        <Link to='/learn'>Start learning</Link>
         
 
         <section className='word-card-wrapper'>

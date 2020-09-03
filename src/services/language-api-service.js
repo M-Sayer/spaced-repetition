@@ -1,6 +1,7 @@
 import config from '../config';
 import TokenService from './token-service';
 
+
 const LanguageApiService = {
   async getUserLanguage() {
     
@@ -16,7 +17,39 @@ const LanguageApiService = {
   catch (error) {
     console.log(error)
   }
-  }
+  },
+  async getLanguageHead() {
+    try {
+      const res = await fetch(`${config.API_ENDPOINT}/language/head`, {
+        headers: {
+          'authorization': `Bearer ${TokenService.getAuthToken()}`,
+        }
+      })
+
+      const head = await res.json()
+      return head
+    } catch (error) {
+      console.log(error)
+    }
+  },
+  async postGuess(guess) {
+    try {
+      const res = await fetch(`${config.API_ENDPOINT}/language/guess`, {
+        method: 'POST',
+        headers: {
+          'authorization': `Bearer ${TokenService.getAuthToken()}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(guess)
+      });
+
+      console.log(res)
+      console.log(await res.json())
+
+    } catch (error) {
+      console.log(error)
+    }
+  },
 }
 
 export default LanguageApiService;

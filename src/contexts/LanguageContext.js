@@ -11,11 +11,12 @@ export default LanguageContext;
 
 export const LanguageProvider = (props) => {
   const [language, setLanguage] = useState('');
-  const [words, setWords] = useState('')
+  const [words, setWords] = useState('');
+  const [displayWord, setDisplayWord] = useState('');
 
   return (
     <LanguageContext.Provider value={{ 
-      language, setLanguage, words, setWords
+      language, setLanguage, words, setWords, displayWord, setDisplayWord
     }}>
       {props.children}
     </LanguageContext.Provider>

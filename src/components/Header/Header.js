@@ -32,7 +32,8 @@ class Header extends Component {
         >
           Login
         </Link>{" "}
-        <a href={"/login"}>Login</a>{" "}
+        {/* the link below is just to pass the test. */}
+        {/* <a href={"/login"}>Login</a>{" "} */}
         <Link
           className="loginLink"
           activeClassName="loginLinkActive"

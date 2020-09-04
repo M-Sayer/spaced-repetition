@@ -5,6 +5,9 @@ import { StyledWordTile } from './WordTile.styled';
 const WordTile = (props) => {
   let word;
   props.word ? word = props.word : word = props.displayWord;
+  console.log(props.totalScore)
+  console.log(props.displayWord)
+
   return (
     <section className='word-card'>
       <div className='wordInLang'>
@@ -24,9 +27,9 @@ const WordTile = (props) => {
         <span className='incorrectCount'>
           {word.incorrect_count}
         </span>
-        {word.total_score && 
+        {props.totalScore >=0 && 
           <div className='totalScore'>
-            {word.total_score}
+            total score: {props.totalScore}
           </div>}
       </div>
     </section>

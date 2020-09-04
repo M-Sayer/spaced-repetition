@@ -40,11 +40,10 @@ const LanguageApiService = {
           'authorization': `Bearer ${TokenService.getAuthToken()}`,
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(guess)
+        body: JSON.stringify({guess: `${guess}`}),
       });
 
-      console.log(res)
-      console.log(await res.json())
+      return res.json()
 
     } catch (error) {
       console.log(error)

@@ -11,10 +11,8 @@ class DashboardRoute extends Component {
 
   async componentDidMount() {
     const data = await LanguageApiService.getUserLanguage();
-    console.log(data)
     this.context.setLanguage({ ...data.language })
     this.context.setWords(data.words)
-    console.log('context: ', this.context)
   }
   
   renderWordTiles = () => {

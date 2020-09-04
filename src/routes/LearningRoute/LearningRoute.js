@@ -11,13 +11,18 @@ class LearningRoute extends Component {
   static contextType = LanguageContext;
 
   state = {
-    guess: ''
+    guess: '',
+    isCorrect: '',
+    answer: '',
   }
 
-  handleSubmit = e => {
+  handleSubmit = async e => {
     e.preventDefault();
-    console.log(this.state)
-    LanguageApiService.postGuess(this.state)
+    const res = await LanguageApiService.postGuess(this.state.guess)
+    console.log(res)
+    console.log(this.context)
+    this.setState({ isCorrect: res.isCorrect, answer: res.answer })
+
   }
 
   handleChange = e => {
@@ -26,25 +31,39 @@ class LearningRoute extends Component {
 
   async componentDidMount() {
     const res = await LanguageApiService.getLanguageHead();
+    console.log(res)
     this.context.setDisplayWord({
       name: res.nextWord,
-      total_score: res.totalScore,
       correct_count: res.wordCorrectCount,
       incorrect_count: res.wordIncorrectCount, 
-    })
+    });
+    this.context.setTotalScore(res.totalScore);
+  }
+
+  renderSubmitResponse = () => {
+    if (this.state.isCorrect) return (
+      <div className='correct'>
+        correct!
+      </div>
+    )
+
+    if (this.state.isCorrect === false) return (
+      <div className='incorrect'>
+        incorrect... the correct answer is: {this.state.answer}
+      </div>
+    )
   }
 
   render() {
     return (
-      <section className='signupSection'>
+      <section className='learn'>
        <div className='info'>
          <h2>Learn</h2>
-         <p>
-            Practice learning a language with the spaced reptition revision technique.
-          </p>
        </div>
-       <WordTile displayWord={this.context.displayWord}/>
-        <form className='learnForm' onSubmit={(e) => this.handleSubmit(e)}>
+       <WordTile totalScore={this.context.totalScore} displayWord={this.context.displayWord} />
+        {this.renderSubmitResponse()}
+        <form className='learnForm' 
+          onSubmit={(e) => this.handleSubmit(e)}>
           <div>
             <label> 
               <input
@@ -53,7 +72,6 @@ class LearningRoute extends Component {
               placeholder='answer' 
               className='guess' type='text' required /> 
             </label>
-            
           </div>
           
           <Button className='joinBtn' type='submit'>

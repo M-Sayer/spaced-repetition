@@ -6,6 +6,7 @@ import Button from '../../components/Button/Button'
 import '../../components/RegistrationForm/RegistrationForm.css'
 import LanguageContext from '../../contexts/LanguageContext';
 import WordTile from '../../components/Dashboard/WordTile';
+import './LearningRoute.css'
 
 class LearningRoute extends Component {
   static contextType = LanguageContext;
@@ -100,6 +101,7 @@ class LearningRoute extends Component {
        <div className='info'>
          <h2>Learn</h2>
        </div>
+        
        <WordTile totalScore={this.context.totalScore} displayWord={this.context.displayWord} />
         {this.renderSubmitResponse()}
         {this.state.submit &&        

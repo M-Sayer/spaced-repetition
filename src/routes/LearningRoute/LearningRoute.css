@@ -1,0 +1,29 @@
+section.word-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+form.learnForm {
+    width: 100%;
+}
+
+div.incorrect, div.correct {
+margin: 10px;
+font-size: 1.2em;
+}
+
+input.guess {
+    margin-top: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+
+    section.word-card {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+}

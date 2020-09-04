@@ -26,11 +26,13 @@ const WordTile = (props) => {
         <span className='incorrectCount'>
           {word.incorrect_count}
         </span>
+      </div>
+      <div>
         {props.totalScore >=0 && 
           <div className='totalScore'>
             total score: {props.totalScore}
           </div>}
-      </div>
+          </div>
     </section>
   )
 }

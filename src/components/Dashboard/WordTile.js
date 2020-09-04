@@ -4,9 +4,8 @@ import { StyledWordTile } from './WordTile.styled';
 
 const WordTile = (props) => {
   let word;
+  //word prop from dashboard route, displayWord prop from learn route
   props.word ? word = props.word : word = props.displayWord;
-  console.log(props.totalScore)
-  console.log(props.displayWord)
 
   return (
     <section className='word-card'>

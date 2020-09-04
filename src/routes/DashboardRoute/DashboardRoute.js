@@ -11,6 +11,7 @@ class DashboardRoute extends Component {
 
   async componentDidMount() {
     const data = await LanguageApiService.getUserLanguage();
+    console.log(data)
     this.context.setLanguage({ ...data.language })
     this.context.setWords(data.words)
   }
@@ -18,43 +19,40 @@ class DashboardRoute extends Component {
   renderWordTiles = () => {
     if (this.context.words) return this.context.words.map((word, idx) => {
       return (
-        <WordTile className='word-card' key={idx} word={word} />
+        <li>
+          <h4>
+            {word.original}
+          </h4>
+          <h5>
+            {word.translation}
+          </h5>
+          <p>
+            correct answer count: {word.correct_count}
+          </p>
+          <p>
+            incorrect answer count: {word.incorrect_count}
+          </p>
+        </li>
       )
     })
-  }
-
-  renderTotalScore = () => {
-    let correct = 0
-    let incorrect = 0
-    if (this.context.words) {
-      this.context.words.forEach(word => {
-        correct += word.correct_count
-        incorrect += word.incorrect_count
-      })
-    }
-    return (correct - incorrect)
   }
   
   render() {
     return (
-      <div className='dash'>
-        <div className="language-header-text">
-          Language: {this.context.language.name}
-        </div>
-       
+      <section className='dash'>
+        <h2>
+        {this.context.language.name}
+        </h2>
         <div className='score-box'>
-        <p>total score: {this.renderTotalScore()}</p>
-
+        <p>Total correct answers: {this.context.language.total_score}</p>
         </div>
+        <Link to='/learn'>Start practicing</Link>
+        <h3>Words to practice</h3>
+        <ul className='word-class-wrapper'>
+          {this.renderWordTiles()}
+        </ul>
 
-        <Link to='/learn'>Start learning</Link>
-        
-
-        <section className='word-card-wrapper'>
-        {this.renderWordTiles()}
-        </section>
-
-      </div>
+      </section>
     );
   }
 }

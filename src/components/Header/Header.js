@@ -24,24 +24,20 @@ class Header extends Component {
 
   renderLoginLink() {
     return (
-      <nav>
+      <>
         <Link
           className="loginLink"
           activeClassName="loginLinkActive"
-          to="/login"
-        >
+          to="/login">
           Login
         </Link>{" "}
-        {/* the link below is just to pass the test. */}
-        {/* <a href={"/login"}>Login</a>{" "} */}
         <Link
           className="loginLink"
           activeClassName="loginLinkActive"
-          to="/register"
-        >
+          to="/register">
           Sign up
         </Link>
-      </nav>
+      </>
     );
   }
 

@@ -53,40 +53,43 @@ class LoginForm extends Component {
             technique.
           </p>
         </div>
-        <form className="loginForm" onSubmit={this.handleSubmit}>
-          <div role="alert">{error && <p>{error}</p>}</div>
-          <div>
-            <Label htmlFor="login-username-input"></Label>
-            <Input
-              className="inputFields"
-              ref={this.firstInput}
-              id="login-username-input"
-              name="username"
-              required
-              placeholder="Username"
-            />
-          </div>
-          <div>
-            <Label htmlFor="login-password-input"></Label>
-            <Input
-              className="inputFields"
-              id="login-password-input"
-              name="password"
-              type="password"
-              required
-              placeholder="password"
-            />
-          </div>
-          <Button className="loginBtn" type="submit">
-            Login
-          </Button>
-          <footer>
-            Don't have an account?{" "}
-            <Link className="footerLink" to="/register">
-              Sign up
-            </Link>
-          </footer>
-        </form>
+        <section>
+          <form className="loginForm" onSubmit={this.handleSubmit}>
+            <div role="alert">{error && <p>{error}</p>}</div>
+            <div>
+              <Label htmlFor="login-username-input"> Username
+              <Input
+                className="inputFields"
+                ref={this.firstInput}
+                id="login-username-input"
+                name="username"
+                type='text'
+                required
+                placeholder="Username"/>
+              </Label>
+            </div>
+            <div>
+              <Label htmlFor="login-password-input">Password</Label>
+              <Input
+                className="inputFields"
+                id="login-password-input"
+                name="password"
+                type="password"
+                required
+                placeholder="password"
+              />
+            </div>
+            <Button className="loginBtn" type="submit">
+              Login
+            </Button>
+            <footer>
+              Don't have an account?{" "}
+              <Link className="footerLink" to="/register">
+                Sign up
+              </Link>
+            </footer>
+          </form>
+        </section>
       </div>
     );
   }

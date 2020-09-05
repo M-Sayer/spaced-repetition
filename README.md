@@ -29,6 +29,28 @@ https://github.com/MattDizzle/favicon-host/blob/master/Login.JPG?raw=true
 
 https://github.com/MattDizzle/favicon-host/blob/master/Registration.JPG?raw=true
 
+# About the Technology Stack
+
+Front-end technologies:
+
+HTML5, CSS3, Javascript, React, JSX
+
+Server technologies:
+
+​Express, Morgan, Helmet, Path, JsonWebToken, XSS, pg, Dotenv, Cors, Postgrator, Supertest
+
+Data Persistence:
+
+PostgreSQL
+
+Hosting/SaaS:
+Vercel
+Heroku
+
+​Development Environment
+
+Node.js
+
 ## Setup
 
 To setup the application

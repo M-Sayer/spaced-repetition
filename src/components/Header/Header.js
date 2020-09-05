@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import TokenService from "../../services/token-service";
 import UserContext from "../../contexts/UserContext";
 import "./Header.css";
@@ -32,8 +32,7 @@ class Header extends Component {
         >
           Login
         </Link>{" "}
-        {/* the link below is just to pass the test. */}
-        {/* <a href={"/login"}>Login</a>{" "} */}
+        
         <Link
           className="loginLink"
           activeClassName="loginLinkActive"

@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import { Input, Required, Label } from '../../components/Form/Form'
 import LanguageApiService from '../../services/language-api-service'
 import Button from '../../components/Button/Button'
 import '../../components/RegistrationForm/RegistrationForm.css'
@@ -125,11 +123,7 @@ class LearningRoute extends Component {
             Next
           </Button>
         }
-        {/* <footer>
-            Need a Hint?
-            {' '}
-            <Link className='footerLink' to='https://www.youtube.com/watch?v=gd4TwRdlMxM'>Get Help</Link>
-        </footer> */}
+        
      </section>
     );
   }

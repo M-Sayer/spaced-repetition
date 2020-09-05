@@ -2,9 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import LanguageApiService from '../../services/language-api-service';
 import './DashboardRoute.css'
-
 import LanguageContext from '../../contexts/LanguageContext';
-import WordTile from '../../components/Dashboard/WordTile';
 
 class DashboardRoute extends Component {
   static contextType = LanguageContext;
@@ -19,18 +17,18 @@ class DashboardRoute extends Component {
   renderWordTiles = () => {
     if (this.context.words) return this.context.words.map((word, idx) => {
       return (
-        <li>
+        <li className='word-card'>
           <h4>
             {word.original}
           </h4>
           <h5>
             {word.translation}
           </h5>
-          <p>
-            correct answer count: {word.correct_count}
+          <p >
+            correct answer count: <span className='correctCount'>{word.correct_count}</span>
           </p>
           <p>
-            incorrect answer count: {word.incorrect_count}
+            incorrect answer count: <span className='incorrectCount'>{word.incorrect_count}</span>
           </p>
         </li>
       )
@@ -48,7 +46,7 @@ class DashboardRoute extends Component {
         </div>
         <Link to='/learn'>Start practicing</Link>
         <h3>Words to practice</h3>
-        <ul className='word-class-wrapper'>
+        <ul className='word-card-wrapper'>
           {this.renderWordTiles()}
         </ul>
 

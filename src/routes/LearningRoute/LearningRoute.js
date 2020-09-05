@@ -1,11 +1,8 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import { Input, Required, Label } from '../../components/Form/Form'
 import LanguageApiService from '../../services/language-api-service'
 import Button from '../../components/Button/Button'
 import '../../components/RegistrationForm/RegistrationForm.css'
 import LanguageContext from '../../contexts/LanguageContext';
-import WordTile from '../../components/Dashboard/WordTile';
 
 class LearningRoute extends Component {
   static contextType = LanguageContext;
@@ -110,7 +107,7 @@ class LearningRoute extends Component {
         <h2>
           {'Good try, but not quite right :('}
         </h2>
-          <p>
+          <p className='learn-count'>
             The correct translation for {this.context.displayWord.name} was {this.state.answer} and you chose {this.state.guess}!
           </p>
         </div>
@@ -125,16 +122,12 @@ class LearningRoute extends Component {
         <h2>
           Translate the word:
         </h2>
-        <span>
+        <span className='learn-word'>
           {word.name}
         </span>
-        <p>Your total score is: {this.context.totalScore}</p>
-        <p>
-          You have answered this word correctly {word.correct_count} times.
-        </p>
-        <p>
-          You have answered this word incorrectly {word.incorrect_count} times.
-        </p>
+        <p className='learn-total-score'>Your total score is: {this.context.totalScore} </p>
+        <p className='learn-count'> You have answered this word correctly <span className='correctCount'>{word.correct_count}</span> times. </p>
+        <p className='learn-count'> You have answered this word incorrectly <span className='incorrectCount'>{word.incorrect_count}</span> times. </p>
       </div>
     )
 }
@@ -166,11 +159,7 @@ class LearningRoute extends Component {
             Try another word!
           </Button>
         }
-        {/* <footer>
-            Need a Hint?
-            {' '}
-            <Link className='footerLink' to='https://www.youtube.com/watch?v=gd4TwRdlMxM'>Get Help</Link>
-        </footer> */}
+        
      </section>
     );
   }

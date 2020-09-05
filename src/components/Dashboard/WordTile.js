@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { StyledWordTile } from './WordTile.styled';
-
 const WordTile = (props) => {
 
   return (

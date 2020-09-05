@@ -1,35 +1,87 @@
-body{
-  background: rgb(2,0,36);
-  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(124,10,180,1) 86%, rgba(10,180,180,1) 100%);
+body {
+  background: rgb(2, 0, 36);
+  background: radial-gradient(
+    circle,
+    rgba(2, 0, 36, 1) 0%,
+    #7c0ab4 86%,
+    rgba(10, 180, 180, 1) 100%
+  );
 }
 
-div[role=alert] {
+div[role="alert"] {
   color: red;
 }
 
 span {
   color: white;
   margin: 5px;
-  font-size: 1.0em;
+  font-size: 1em;
 }
 
 a {
   text-decoration: none;
   font-size: 1.5em;
-  font-family: 'Squada One', cursive;
+  font-family: "Squada One", cursive;
   margin-left: 10px;
   color: white;
 }
 
 h2 {
   margin: 5px;
-  font-family: 'Squada One', cursive;
+  font-family: "Squada One", cursive;
   font-size: 2.8em;
 }
 
 h4 {
   margin: 5px;
   font-size: 1.2em;
+}
+
+.word-dash {
+  color: white;
+  font-family: "Squada One", cursive;
+  font-size: 4em;
+}
+
+.translation-dash {
+  color: #7c0ab4;
+  font-size: 2em;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.score {
+  font-size: 0.9em;
+}
+
+.score-box {
+  display: flex;
+}
+
+.score-wrapper {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.words-practice {
+  color: white;
+}
+
+.learn-start {
+  color: #0ab4b4;
+  font-size: 2em;
+}
+
+.learn-start:hover {
+  color: #ffffff;
+  font-size: 2em;
+}
+
+span.learn-word {
+  color: #7c0ab4;
+  font-size: 3.5em;
+  margin: 0;
 }
 
 p {
@@ -41,7 +93,7 @@ p {
 
 .language-header-text {
   color: #0ab4b4;
-  font-family: 'Squada One', cursive;
+  font-family: "Squada One", cursive;
   font-size: 2em;
 }
 
@@ -67,65 +119,72 @@ p {
   align-items: center;
   background: #0ab4b4;
   margin: 5px;
-  padding: 0px;
-  box-shadow: 5px 10px 20px 5px rgba(0, 0, 0, .5);
+  padding: 10px;
+  box-shadow: 5px 10px 20px 5px rgba(0, 0, 0, 0.5);
+}
 
-  }
+footer {
+  margin: 5px;
+}
 
-  footer {
-    margin: 5px;
-  }
+.learn-word {
+  color: white;
+  font-size: 3em;
+  margin: 0;
+}
 
-  .learn-word {
-    color: white;
-    font-size: 3em;
-  }
+.learn-total-score {
+  font-size: 1.5em;
+  margin-top: 30px;
+}
 
-  .learn-total-score {
-    font-size: 1.5em;
-    margin-top: 30px;
-  }
+.learn-count {
+  font-size: 1em;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: black;
+}
 
-  .learn-count {
-    font-size: 1em;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    color: black;
-  }
+.feedback {
+  font-size: 1.2em;
+}
 
-  section.learn {
-    background-color: #0ab4b4;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
+.long-feedback {
+  color: #7c0ab4;
+  font-size: 1.1em;
+}
 
-  ul.word-card-wrapper {
-    margin: 0;
-    padding: 0;
-  }
+section.learn {
+  background-color: #0ab4b4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+ul.word-card-wrapper {
+  margin: 0;
+  padding: 0;
+}
 
 @media screen and (min-width: 1200px) {
-
   .dash {
     display: flex;
     flex-direction: column;
   }
 
   .word-card {
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 30%;
-  /* background: rgba(20, 40, 40, .8); */
-  margin: 20px;
-  
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    /* background: rgba(20, 40, 40, .8); */
+    margin: 20px;
   }
 
-  .word-card-wrapper{
+  .word-card-wrapper {
     width: 90%;
     display: flex;
     flex-wrap: wrap;
@@ -140,5 +199,4 @@ p {
   span {
     padding: 0 20px;
   }
-  
 }

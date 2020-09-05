@@ -18,18 +18,29 @@ class DashboardRoute extends Component {
     if (this.context.words) return this.context.words.map((word, idx) => {
       return (
         <li className='word-card'>
-          <h4>
+
+          <h4 className='word-dash'>
             {word.original}
           </h4>
-          <h5>
+
+          <h5 className='translation-dash'>
             {word.translation}
           </h5>
-          <p >
-            correct answer count: <span className='correctCount'>{word.correct_count}</span>
-          </p>
-          <p>
-            incorrect answer count: <span className='incorrectCount'>{word.incorrect_count}</span>
-          </p>
+
+          <div className='score-wrapper'>
+
+          <div className='score-box'>
+          <p className='score'>correct answer count:</p> 
+          <span className='correctCount'>{word.correct_count}</span>
+          </div>
+
+          <div className='score-box'>
+          <p className='score'>incorrect answer count:</p> 
+          <span className='incorrectCount'>{word.incorrect_count}</span>
+          </div>
+
+          </div>
+          
         </li>
       )
     })
@@ -44,8 +55,8 @@ class DashboardRoute extends Component {
         <div className='score-box'>
         <p>Total correct answers: {this.context.language.total_score}</p>
         </div>
-        <Link to='/learn'>Start practicing</Link>
-        <h3>Words to practice</h3>
+        <Link to='/learn' className='learn-start'>Start practicing</Link>
+        <h3 className='words-practice'>Words to practice</h3>
         <ul className='word-card-wrapper'>
           {this.renderWordTiles()}
         </ul>

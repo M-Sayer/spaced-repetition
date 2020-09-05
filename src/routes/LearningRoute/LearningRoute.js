@@ -86,12 +86,11 @@ class LearningRoute extends Component {
           </p>
         </div>
         <div className='DisplayFeedback'>
-          <h2>
+          <h2 className='feedback'>
             You were correct! :D
           </h2>
-          <p>
-            The correct translation for {this.context.displayWord.name} was {this.state.answer} and you chose {this.state.guess}!
-          </p>
+          <p className='long-feedback'> The correct translation for {this.context.displayWord.name} was {this.state.answer}</p>
+          <p className='long-feedback'> and you chose {this.state.guess}! </p>
         </div>
       </>
     )
@@ -104,11 +103,11 @@ class LearningRoute extends Component {
           </p>
         </div>
         <div className='DisplayFeedback'>
-        <h2>
+        <h2 className='feedback'>
           {'Good try, but not quite right :('}
         </h2>
-          <p className='learn-count'>
-            The correct translation for {this.context.displayWord.name} was {this.state.answer} and you chose {this.state.guess}!
+          <p className='long-feedback'> The correct translation for {this.context.displayWord.name} was {this.state.answer}</p>
+          <p className='long-feedback'> and you chose {this.state.guess}!
           </p>
         </div>
       </>

@@ -20,16 +20,25 @@ Users can login and learn French using thier user name and password.
 
 Users learn new words through spaced-repetition.
 
+_________________________________________________________________________
+_________________________________________________________________________
+
 Screenshots:
-https://github.com/MattDizzle/favicon-host/blob/master/Dash.JPG?raw=true
 
-https://github.com/MattDizzle/favicon-host/blob/master/Learn.JPG?raw=true
+Dash:
+![Spaced-Repetition Screenshot: Dash](https://github.com/MattDizzle/favicon-host/blob/master/Dash.JPG?raw=true)
 
-https://github.com/MattDizzle/favicon-host/blob/master/Login.JPG?raw=true
+Login:
+![Spaced-Repetition Screenshot: Login](https://github.com/MattDizzle/favicon-host/blob/master/Login.JPG?raw=true)
 
-https://github.com/MattDizzle/favicon-host/blob/master/Registration.JPG?raw=true
+Learn:
+![Spaced-Repetition Screenshot: Learn](https://github.com/MattDizzle/favicon-host/blob/master/Learn.JPG?raw=true)
 
-# About the Technology Stack
+Registration:
+![Spaced-Repetition Screenshot: Registration](https://github.com/MattDizzle/favicon-host/blob/master/Registration.JPG?raw=true)
+
+
+## About the Technology Stack
 
 Front-end technologies:
 

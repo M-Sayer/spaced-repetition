@@ -20,8 +20,9 @@ Users can login and learn French using thier user name and password.
 
 Users learn new words through spaced-repetition.
 
-_________________________________________________________________________
-_________________________________________________________________________
+---
+
+---
 
 ## Screenshots
 
@@ -40,30 +41,29 @@ Learn:
 Registration:
 ![Spaced-Repetition Screenshot: Registration](https://github.com/MattDizzle/favicon-host/blob/master/Registration.JPG?raw=true)
 
+# About the Technology Stack
 
-## About the Technology Stack
-
-Front-end technologies:
+## Front-end technologies:
 
 HTML5, CSS3, Javascript, React, JSX
 
-Server technologies:
+## Server technologies:
 
 ​Express, Morgan, Helmet, Path, JsonWebToken, XSS, pg, Dotenv, Cors, Postgrator, Supertest
 
-Data Persistence:
+## Data Persistence:
 
 PostgreSQL
 
-Hosting/SaaS:
-Vercel
-Heroku
+## Hosting/SaaS:
 
-​Development Environment
+Vercel, Heroku
+
+## Development Environment:
 
 Node.js
 
-## Setup
+## Setup:
 
 To setup the application
 

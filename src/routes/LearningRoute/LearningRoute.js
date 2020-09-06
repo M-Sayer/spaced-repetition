@@ -154,9 +154,9 @@ class LearningRoute extends Component {
           </form>
         }
         {!this.state.submit && 
-          <Button onClick={() => this.setState({ next: true })}>
+          <button className="loginBtn" onClick={() => this.setState({ next: true })}>
             Try another word!
-          </Button>
+          </button>
         }
         
      </section>

@@ -48,16 +48,16 @@ class LoginForm extends Component {
       <div className="loginSection animate__animated animate__backInDown">
         <div className="info">
           <h2>Login</h2>
-          <p>
-            Practice learning a language with the spaced reptition revision
-            technique.
-          </p>
+          <p> Practice learning a language with </p>
+          <p> the spaced reptition revision technique. </p>
         </div>
         <section>
           <form className="loginForm" onSubmit={this.handleSubmit}>
+
             <div role="alert">{error && <p>{error}</p>}</div>
-            <div>
-              <Label htmlFor="login-username-input"> Username
+
+            <div className='input-box'>
+              <Label htmlFor="login-username-input"> Username </Label>
               <Input
                 className="inputFields"
                 ref={this.firstInput}
@@ -66,9 +66,9 @@ class LoginForm extends Component {
                 type='text'
                 required
                 placeholder="Username"/>
-              </Label>
+              
             </div>
-            <div>
+            <div className='input-box'>
               <Label htmlFor="login-password-input">Password</Label>
               <Input
                 className="inputFields"

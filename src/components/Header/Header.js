@@ -46,7 +46,7 @@ class Header extends Component {
       <header className='animate__animated animate__backInUp'>
         <h1>
           <Link className="headerLink" to="/">
-            Spaced repetition
+            Spaced Repetition
           </Link>
         </h1>
         <nav>

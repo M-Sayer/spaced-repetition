@@ -45,7 +45,7 @@ class LoginForm extends Component {
   render() {
     const { error } = this.state;
     return (
-      <div className="loginSection">
+      <div className="loginSection animate__animated animate__backInDown">
         <div className="info">
           <h2>Login</h2>
           <p>

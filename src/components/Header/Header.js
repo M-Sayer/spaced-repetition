@@ -43,7 +43,7 @@ class Header extends Component {
 
   render() {
     return (
-      <header>
+      <header className='animate__animated animate__backInUp'>
         <h1>
           <Link className="headerLink" to="/">
             Spaced repetition

@@ -4,6 +4,7 @@ import LanguageApiService from '../../services/language-api-service';
 import './DashboardRoute.css'
 import LanguageContext from '../../contexts/LanguageContext';
 
+
 class DashboardRoute extends Component {
   static contextType = LanguageContext;
 
@@ -17,7 +18,7 @@ class DashboardRoute extends Component {
   renderWordTiles = () => {
     if (this.context.words) return this.context.words.map((word, idx) => {
       return (
-        <li className='word-card'>
+        <li className='animate__animated animate__backInDown word-card'>
 
           <h4 className='word-dash'>
             {word.original}

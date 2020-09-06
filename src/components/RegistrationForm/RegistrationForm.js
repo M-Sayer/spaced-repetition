@@ -40,7 +40,7 @@ class RegistrationForm extends Component {
   render() {
     const { error } = this.state
     return (
-     <div className='signupSection'>
+     <div className='signupSection animate__animated animate__backInDown'>
        <div className='info'>
          <h2>Sign up</h2>
          <p>

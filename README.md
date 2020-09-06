@@ -25,6 +25,9 @@ _________________________________________________________________________
 
 ## Screenshots
 
+Spaced Rep:
+![Spaced-Repetition Screenshot: Dash](https://github.com/MattDizzle/favicon-host/blob/master/GIF-200906_142043.gif?raw=true)
+
 Dash:
 ![Spaced-Repetition Screenshot: Dash](https://github.com/MattDizzle/favicon-host/blob/master/Dash.JPG?raw=true)
 

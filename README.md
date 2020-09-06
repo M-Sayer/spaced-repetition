@@ -1,9 +1,9 @@
 # Spaced Repetition Capstone
 
-Project by Muhajir Sayer and Matthew R.
+### Project by Muhajir Sayer and Matthew R.
 
 Live Link:
-https://spaced-repetition-brown.vercel.app/learn
+https://spaced-repetition-brown.vercel.app/
 
 Heroku Link:
 https://secret-brushlands-54692.herokuapp.com/
@@ -23,7 +23,7 @@ Users learn new words through spaced-repetition.
 _________________________________________________________________________
 _________________________________________________________________________
 
-Screenshots:
+## Screenshots
 
 Dash:
 ![Spaced-Repetition Screenshot: Dash](https://github.com/MattDizzle/favicon-host/blob/master/Dash.JPG?raw=true)

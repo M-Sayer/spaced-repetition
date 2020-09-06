@@ -1,4 +1,4 @@
-# Spaced Repetition Capstone
+# Spaced Repetition
 
 ### Project by Muhajir Sayer and Matthew R.
 

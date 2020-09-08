@@ -14,7 +14,7 @@ header {
 
 header h1 {
   flex: 1;
-  font-size: 1.8em;
+  font-size: 1.2em;
   font-family: 'Squada One', cursive;
 
 }
@@ -42,4 +42,16 @@ a.headerLink {
   color: rgba(10, 180, 180, 1);
   text-decoration: underline;
   font-family: 'Khand', sans-serif;
+}
+
+@media screen and (min-width: 1200px) {
+
+  header h1 {
+    flex: 1;
+    font-size: 1.8em;
+    
+  
+  }
+
+
 }

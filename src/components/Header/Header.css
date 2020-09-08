@@ -9,39 +9,39 @@ header {
   padding-right: 10%;
   margin: 0;
   background-color: black;
+  font-family: 'Squada One', cursive;
 
 }
 
-header h1 {
+header>h1 {
   flex: 1;
   font-size: 1.2em;
   font-family: 'Squada One', cursive;
 
 }
 
-a.headerLink {
-  font-family: 'Squada One', cursive;
-  font-size: 1.5em;
-
-}
-
-
 .headerLink {
-  color: rgba(10, 180, 180, 1);
+  color: #0ab4b4;
   text-decoration: none;
+  font-family: 'Squada One', cursive;
 
 }
 
 .loginLink {
-  color: rgba(10, 180, 180, 1);
+  color: #0ab4b4;
   text-decoration: none;
-  font-family: 'Khand', sans-serif;
+  font-family: 'Squada One', cursive;
 }
 
 .loginLinkActive {
-  color: rgba(10, 180, 180, 1);
+  color: #0ab4b4;
   text-decoration: underline;
-  font-family: 'Khand', sans-serif;
+  font-family: 'Squada One', cursive;
+}
+
+span.logged-in, a {
+  font-size: 1.2em;
+  font-family: 'Squada One', cursive;
 }
 
 @media screen and (min-width: 1200px) {
@@ -49,9 +49,11 @@ a.headerLink {
   header h1 {
     flex: 1;
     font-size: 1.8em;
-    
-  
   }
 
-
+  span.logged-in, a {
+    font-size: 1.5em;
+    font-family: 'Squada One', cursive;
+  }
+  
 }

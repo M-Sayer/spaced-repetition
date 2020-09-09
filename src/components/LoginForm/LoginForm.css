@@ -84,10 +84,11 @@ body {
   padding: 10px 50px;
   cursor: pointer;
   transition: .4s;
+  
 }
 
 .loginBtn:hover {
-  background: rgba(20, 20, 20, .8);
+  background: rgba(20, 20, 20, 0.918);
   padding: 10px 80px;
 }
 

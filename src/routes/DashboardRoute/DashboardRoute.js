@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import LanguageApiService from '../../services/language-api-service';
 import './DashboardRoute.css'
 import LanguageContext from '../../contexts/LanguageContext';
+import UIfx from 'uifx'
+import loginAudio from '../../SFX/PremiumBeat_0013_cursor_selection_15.wav'
 
 
 class DashboardRoute extends Component {
@@ -48,6 +50,7 @@ class DashboardRoute extends Component {
   }
   
   render() {
+    const bell = new UIfx(loginAudio, { volume: 0.3, throttleMs: 100});
     return (
       <section className='dash'>
         <h2>
@@ -56,7 +59,7 @@ class DashboardRoute extends Component {
         <div className='score-box'>
         <p>Total correct answers: {this.context.language.total_score}</p>
         </div>
-        <Link to='/learn' className='learn-start'>Start practicing</Link>
+        <Link onClick={bell.play()} to='/learn' className='learn-start' >Start practicing</Link>
         <h3 className='words-practice'>Words to practice</h3>
         <ul className='word-card-wrapper'>
           {this.renderWordTiles()}

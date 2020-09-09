@@ -4,6 +4,7 @@ import Button from '../../components/Button/Button'
 import '../../components/RegistrationForm/RegistrationForm.css'
 import LanguageContext from '../../contexts/LanguageContext';
 
+
 class LearningRoute extends Component {
   static contextType = LanguageContext;
 
@@ -78,7 +79,9 @@ class LearningRoute extends Component {
   }
 
   renderSubmitResponse = () => {
+   
     if (this.state.isCorrect) return (
+     
       <>
         <div className='DisplayScore'>
           <p>
@@ -112,10 +115,12 @@ class LearningRoute extends Component {
         </div>
       </>
     )
+   
   }
 
   renderDisplayWord = () => {
     const word = this.context.displayWord;
+    
     return (
       <div>
         <h2>
@@ -148,7 +153,7 @@ class LearningRoute extends Component {
                 className='guess-input' type='text' required /> 
               </label>
             </div>
-            <Button className='joinBtn' type='submit'>
+            <Button className='learnBtn' type='submit'>
               Submit your answer
             </Button>
           </form>
